@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="cBase.h" />
+    <ClInclude Include="cRender\cColor.h">
+      <Filter>cRender</Filter>
+    </ClInclude>
+    <ClInclude Include="cRender\cRender.h">
+      <Filter>cRender</Filter>
+    </ClInclude>
+    <ClInclude Include="cRender\cFont\cFont.h">
+      <Filter>cRender\cFont</Filter>
+    </ClInclude>
+    <ClInclude Include="cDrawMenu.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="cMenu.h">
+      <Filter>cMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="cMemory.h" />
+    <ClInclude Include="cVar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cBase.cpp" />
+    <ClCompile Include="cRender\cRender.cpp">
+      <Filter>cRender</Filter>
+    </ClCompile>
+    <ClCompile Include="cRender\cFont\cFont.cpp">
+      <Filter>cRender\cFont</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="cRender">
+      <UniqueIdentifier>{e6522f05-0b1d-4ca7-bd72-8fb933850bd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cRender\cFont">
+      <UniqueIdentifier>{8f18477b-2b13-4bad-8e6e-8288a632343c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{b5bc9abf-0c93-496e-a870-69d177fe6fcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cMenu">
+      <UniqueIdentifier>{baa31c0a-7adc-4d53-971d-6431129d7bd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cRevers">
+      <UniqueIdentifier>{1d6c07fa-ac76-42e4-9896-9fe9dc3515ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

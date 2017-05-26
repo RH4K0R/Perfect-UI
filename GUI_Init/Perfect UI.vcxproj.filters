@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Rendering system">
+      <UniqueIdentifier>{d72f4eac-361c-4772-87e0-69d6c945df35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Items">
+      <UniqueIdentifier>{fb239fc5-ef25-449e-8e51-93ab2ab51522}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools">
+      <UniqueIdentifier>{b8844e00-7c0e-4fd2-b207-52efd87f4f5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hooking">
+      <UniqueIdentifier>{0f67d908-aa52-46a0-a7f4-35d3f269ec31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hooking\DirectX 9">
+      <UniqueIdentifier>{a8fd6a43-1489-42f0-b766-f5d1fe448641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hooking\DirectX 9\x86">
+      <UniqueIdentifier>{08e5a7b2-42f4-459f-b26a-324e645708d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Draw UI Frame">
+      <UniqueIdentifier>{a9de1000-9932-4ae8-9610-d8f1a0f1da37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Variables">
+      <UniqueIdentifier>{78725d18-10b1-43b8-9422-de9fa88eebc4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="crender\cfont\cFont.cpp">
+      <Filter>Header Files\Rendering system</Filter>
+    </ClCompile>
+    <ClCompile Include="crender\cRender.cpp">
+      <Filter>Header Files\Rendering system</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="crender\cRender.h">
+      <Filter>Header Files\Rendering system</Filter>
+    </ClInclude>
+    <ClInclude Include="crender\cColor.h">
+      <Filter>Header Files\Rendering system</Filter>
+    </ClInclude>
+    <ClInclude Include="cDrawMenu.h">
+      <Filter>Header Files\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="cBase.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="crender\cfont\cFont.h">
+      <Filter>Header Files\Rendering system</Filter>
+    </ClInclude>
+    <ClInclude Include="cHook.h">
+      <Filter>Header Files\Hooking\DirectX 9</Filter>
+    </ClInclude>
+    <ClInclude Include="cMenu.h">
+      <Filter>Header Files\Draw UI Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="cVar.h">
+      <Filter>Header Files\Variables</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

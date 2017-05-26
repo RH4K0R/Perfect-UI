@@ -10,10 +10,6 @@
 
 /////////////////////
 
-
-
-/////////////////////
-
 void SetupFont(CHAR* FontName, DWORD Stile, LPDIRECT3DDEVICE9 pD3D9)
 {
 	D3DXCreateFont(pD3D9, 13, 0, Stile, 1, 0, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, DEFAULT_QUALITY, FF_MODERN, FontName, &pFont);

@@ -104,7 +104,7 @@ namespace UI
 	{
 		int w = 10;
 		int h = 10;
-		int s = 150.03;
+		int s = 152;
 
 		Render->render_Box(x, y, s, 30, Color(255, 31, 28, 31));
 		Render->render_String(x + (s / 2) - 20, y + 6, Color(255, 255, 255, 255), DT_LEFT | DT_NOCLIP, Button_Text);
@@ -131,7 +131,6 @@ namespace UI
 
 		if (Var == 1)
 		{
-
 			Render->render_Box(x, y, s, 30, Color(255, 95, 93, 91));
 			Render->render_String(x + (s / 2) - 20, y + 6, Color(255, 255, 255, 255), DT_LEFT | DT_NOCLIP, Button_Text);
 		}

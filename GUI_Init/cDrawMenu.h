@@ -139,45 +139,40 @@ namespace UI
 
 	//////////////////////
 
-	void CheckBox(int x, int y, int &Var, char *Button_Text)
+	void CheckBox(int x, int y, bool &Var, char *Button_Text)
 	{
 		int w = 10;
 		int h = 10;
 
-		//////////////////////
-
-		Render->render_GradientBox(x, y, w + 5, h + 5, Color(255, 68, 68, 68), Color(255, 73, 73, 73));
-		Render->render_Border(x - 1, y - 1, w + 5, h + 5, Color(255, 35, 35, 35));
-		Render->render_String(x + 25, y + 1, Color(255, 255, 255, 255), DT_LEFT | DT_NOCLIP, Button_Text);
+		Color cText = Color(255, 255, 255, 255);
+		Color cStartG = Color(255, 68, 68, 68);
+		Color cEndG = Color(255, 73, 73, 73);
 
 		//////////////////////
 
 		if (Globals::IsInBox(x - 1, y - 1, w + 5, h + 5))
 		{
-			Render->render_GradientBox(x, y, w + 5, h + 5, Color(255, 73, 73, 73), Color(255, 78, 78, 78));
-			Render->render_String(x + 25, y + 1, Color(255, 255, 255, 255), DT_LEFT | DT_NOCLIP, Button_Text);
-
-			if (Globals::State_Key(VK_LBUTTON, 5000))
+			cStartG = Color(255, 73, 73, 73);
+			cEndG = Color(255, 78, 78, 78);
+			if (Globals::State_Key(VK_LBUTTON, 5000)) 
 			{
-				if (Var == 1 && Var != 0)
-				{
-					Var = 0;
-				}
-				else if (Var == 0)
-				{
-					Var = 1;
-				}
+				Var ^= 1;
 			}
 		}
 
 		//////////////////////
 
-		if (Var == 1)
+		if (Var)
 		{
-			Render->render_Border(x - 1, y - 1, w + 5, h + 5, Color(255, 35, 35, 35));
-			Render->render_GradientBox(x, y, w + 5, h + 5, Color(255, 125, 198, 112), Color(255, 72, 125, 64));
-			Render->render_String(x + 25, y + 1, Color(255, 255, 255, 255), DT_LEFT | DT_NOCLIP, Button_Text);
+			cStartG = Color(255, 125, 198, 112);
+			cEndG = Color(255, 72, 125, 64);
 		}
+
+		//////////////////////
+
+		Render->render_GradientBox(x, y, w + 5, h + 5, cStartG, cEndG);
+		Render->render_Border(x - 1, y - 1, w + 5, h + 5, Color(255, 35, 35, 35));
+		Render->render_String(x + 25, y + 1, Color(255, 255, 255, 255), DT_LEFT | DT_NOCLIP, Button_Text);
 	}
 
 	//////////////////////
@@ -206,9 +201,12 @@ namespace UI
 		{
 			if (Globals::State_Key(VK_LBUTTON, 5000))
 			{
-				if (Var >= 0 && Var<max)
+				if (Var >= 0)
 				{
 					Var++;
+
+					if (Var > max)
+						Var = 0;
 				}
 			}
 		}

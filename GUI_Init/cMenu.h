@@ -20,10 +20,10 @@ void DrawUIFrame(int x, int y, LPDIRECT3DDEVICE9 pD3D9)
 	Render->render_FillRGB(x + 2, y + 2, 602, 220 + MENUH, D3DCOLOR_ARGB(X::alpha, 19, 19, 19));
 	Render->render_Border2(x - 2, y - 2, 602 + 3, 220 + MENUH + 3, Color(255, 30, 30, 30)); // Outline Outside
 	
-	UI::Tab(x + 3, y + 7, tab[0], "Aimbot");
-	UI::Tab(x + 3 + 150, y + 7, tab[1], "Visuals");
-	UI::Tab(x + 3 + 150 * 2, y + 7, tab[2], "Misc");
-	UI::Tab(x + 3 + 150 * 3, y + 7, tab[3], "Colors");
+	UI::Tab(x + 1, y + 7, tab[0], "Aimbot");
+	UI::Tab(x + 1 + 150, y + 7, tab[1], "Visuals");
+	UI::Tab(x + 1 + 150 * 2, y + 7, tab[2], "Misc");
+	UI::Tab(x + 1 + 150 * 3, y + 7, tab[3], "Colors");
 
 	Render->render_String(5, 5, Color(255, 218, 218, 218), DT_LEFT | DT_NOCLIP, WINDOWNAME);
 

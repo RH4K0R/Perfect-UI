@@ -18,16 +18,16 @@ void DrawUIFrame(int x, int y, LPDIRECT3DDEVICE9 pD3D9)
 		X::alpha = 255;
 
 	Render->render_FillRGB(x + 2, y + 2, 602, 220 + MENUH, D3DCOLOR_ARGB(X::alpha, 19, 19, 19));
-	Render->render_Border2(x - 2, y - 2, 602 + 3, 220 + MENUH + 3, Color(255, 30, 30, 30)); // Outline Outside
+	Render->render_Border2(x - 2, y - 2, 602 + 6, 220 + 6 + MENUH, Color(255, 30, 30, 30)); // Outline Outside
 	
-	UI::Tab(x + 1, y + 7, tab[0], "Aimbot");
-	UI::Tab(x + 1 + 150, y + 7, tab[1], "Visuals");
-	UI::Tab(x + 1 + 150 * 2, y + 7, tab[2], "Misc");
-	UI::Tab(x + 1 + 150 * 3, y + 7, tab[3], "Colors");
+	UI::Tab(x + 2, y + 7, tab[0], "Aimbot");
+	UI::Tab(x + 2 + 150, y + 7, tab[1], "Visuals");
+	UI::Tab(x + 2 + 150 * 2, y + 7, tab[2], "Misc");
+	UI::Tab(x + 2 + 150 * 3, y + 7, tab[3], "Colors");
 
 	Render->render_String(5, 5, Color(255, 218, 218, 218), DT_LEFT | DT_NOCLIP, WINDOWNAME);
 
-	Render->render_Rainbow(x, y, 602, 2, 0.001f, rainbow); // Rainbow Bar
+	Render->render_Rainbow(x + 2, y + 4, 602, 2, 0.001f, rainbow); // Rainbow Bar
 
 	if (tab[0])
 	{

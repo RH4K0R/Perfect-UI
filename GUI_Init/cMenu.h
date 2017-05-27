@@ -17,11 +17,9 @@ void DrawUIFrame(int x, int y, LPDIRECT3DDEVICE9 pD3D9)
 	else
 		X::alpha = 255;
 
-	Render->render_FillRGB(x, y + 0, 606, 244 + MENUH, D3DCOLOR_ARGB(X::alpha, 40, 40, 40)); // Outline Border
-	Render->render_FillRGB(x + 2, y + 22, 602, 220 + MENUH, D3DCOLOR_ARGB(X::alpha, 19, 19, 19));
-
-	Render->render_FillRGB(x + 2, y + 22, 602, 220 + MENUH, D3DCOLOR_ARGB(X::alpha, 19, 19, 19));
-
+	Render->render_FillRGB(x + 2, y + 2, 602, 220 + MENUH, D3DCOLOR_ARGB(X::alpha, 19, 19, 19));
+	Render->render_Border2(x - 2, y - 2, 602 + 3, 220 + MENUH + 3, Color(255, 30, 30, 30)); // Outline Outside
+	
 	UI::Tab(x + 3, y + 7, tab[0], "Aimbot");
 	UI::Tab(x + 3 + 150, y + 7, tab[1], "Visuals");
 	UI::Tab(x + 3 + 150 * 2, y + 7, tab[2], "Misc");
@@ -29,10 +27,7 @@ void DrawUIFrame(int x, int y, LPDIRECT3DDEVICE9 pD3D9)
 
 	Render->render_String(5, 5, Color(255, 218, 218, 218), DT_LEFT | DT_NOCLIP, WINDOWNAME);
 
-	Render->render_Rainbow(x + 2, y + 4, 602, 2, 0.001f, rainbow); // Rainbow Bar
-
-	Render->render_Border2(x + 2, y + 2, 603, 242 + MENUH, Color(255, 30, 30, 30)); // Outline Inside
-	Render->render_Border2(x + 0, y + 0, 605, 244 + MENUH, Color(255, 30, 30, 30)); // Outline Outside
+	Render->render_Rainbow(x, y, 602, 2, 0.001f, rainbow); // Rainbow Bar
 
 	if (tab[0])
 	{

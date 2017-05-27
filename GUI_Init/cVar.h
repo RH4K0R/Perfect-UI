@@ -18,10 +18,12 @@ FLOAT incr_5 = 0;
 int tab[128];
 
 float example_value[3];
-int example_int_value[3];
+int example_int_value;
+bool example_bool_value[3];
 
 char* example_char[]
 {
+	"Test 0",
 	"Test 1",
 	"Test 2"
 };

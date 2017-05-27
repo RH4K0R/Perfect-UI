@@ -33,6 +33,8 @@ void DrawUIFrame(int x, int y, LPDIRECT3DDEVICE9 pD3D9)
 	{
 		UI::Slider(x + 10, y + 50, 0, 180, &example_value[0], "Example Slider");
 
-		UI::ListView(x + 10, y + 70, example_int_value[0], example_char, 2, "Example Listview", pD3D9);
+		UI::ListView(x + 10, y + 70, example_int_value, example_char, 2, "Example Listview", pD3D9);
+
+		UI::CheckBox(x + 10, y + 90, example_bool_value[0], "Example Checkbox");
 	}
 }

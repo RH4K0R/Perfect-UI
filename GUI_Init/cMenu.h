@@ -1,5 +1,5 @@
 #define WINDOWNAME "D3D Test"
-#define TITLENAME "elect-cheats"
+#define TITLENAME "D3D Test
 
 #define MENUH 100
 
